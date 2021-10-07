@@ -1,0 +1,128 @@
+body {
+    width: 95%;
+    max-width: 800px;
+    margin:auto;
+    background-color: rgb(160, 113, 218);
+    font-family: 'Amatic SC', cursive;
+    line-height: 1.5;
+}
+@media (min-width:992px) 
+{ /*regras para desktops */
+
+}
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 40px;
+  }
+  p {
+    color: black;
+    font-family: arial;
+    font-size: 15px;
+    text-align:justify;
+  }
+ h2{
+     color: black;
+     font-size: 40px; 
+ } 
+ p{
+    color: black;
+    font-family: arial;
+    font-size: 15px;
+    text-align:justify;
+ }
+
+  main {
+      background: rgba(224, 195, 255, 0.562);
+      padding: 5px 40px;
+      margin-top: 70px;
+      border-radius: 10px;
+  }
+  .container{
+    float: left;
+    width: 100%;
+  }
+  .post-content{
+    max-width:700px;
+    text-align: center;
+  }
+  .post-content img{
+    max-width:100%;
+    
+  }
+  .flex-container {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .logo{
+    text-align: center;
+    margin-top: 30px;
+    padding: 80px 60px;
+    margin:0 auto;
+    max-width: 100%;
+	  height:auto;
+  }
+  .logo img{
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+  }
+  .sobremim, .projetos, .contato{
+      margin: 0%;
+      text-align: center;
+      padding: 30px ;
+
+  }
+  #Voltar{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+  }
+  ul{
+    color: black;
+    font-family: arial;
+    font-size: 15px;
+    text-align:justify;
+    flex-wrap: wrap;
+  }
+  .box{
+    background:rgb(243, 201, 243);
+    color: rgb(15, 15, 15);
+    padding: 50px;
+    border: 5px solid rgb(203, 244, 250);
+    flex-wrap: wrap;
+    text-align: justify;
+  }
+  .btn{
+    border:1px solid #8f34da;
+    border-radius:4px;
+    display:inline-block;
+    cursor:pointer;
+    font-family:Verdana;
+    font-weight:normal;
+    font-size:15px;
+    padding:6px 10px;
+    text-decoration:none;
+    margin-bottom: 5px;
+    } 
+    
+    .btn{
+    border-color:#8f34da;
+    color:rgb(43, 33, 97);
+    text-shadow:0px 1px 0px #590c77;
+    }
+
+    .btn:hover {
+    background:linear-gradient(to bottom, #7d65b4 5%, #b9aad5 100%);
+    }
+    
+    .btn:active {
+    position:relative;
+    top:2px;}
+  
+  

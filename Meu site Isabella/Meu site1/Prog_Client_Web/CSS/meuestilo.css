@@ -1,0 +1,98 @@
+body {
+    width: 95%;
+    max-width: 800px;
+    margin:auto;
+    background-color: rgb(160, 113, 218);
+    font-family: 'Amatic SC', cursive;
+    line-height: 1.5;
+}
+@media (min-width:992px) 
+{ /*regras para desktops */
+
+}
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 40px;
+  }
+  p {
+    color: black;
+    font-family: arial;
+    font-size: 15px;
+    text-align:justify;
+  }
+ h2{
+     color: black;
+     font-size: 40px; 
+ } 
+ p{
+    color: black;
+    font-family: arial;
+    font-size: 15px;
+    text-align:justify;
+ }
+
+  main {
+      background: rgba(224, 195, 255, 0.562);
+      padding: 5px 40px;
+      margin-top: 70px;
+      border-radius: 10px;
+  }
+  .container{
+    float: left;
+    width: 100%;
+  }
+  .post-content{
+    max-width:700px;
+    text-align: center;
+  }
+  .post-content img{
+    max-width:100%;
+    
+  }
+  .flex-container {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .logo{
+    text-align: center;
+    margin-top: 30px;
+    padding: 80px 60px;
+    margin:0 auto;
+    max-width: 100%;
+	  height:auto;
+  }
+  .logo img{
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+  }
+  .sobremim, .projetos, .contato{
+      margin: 0%;
+      text-align: center;
+      padding: 30px ;
+
+  }
+  ul{
+    color: black;
+    font-family: arial;
+    font-size: 15px;
+    text-align:justify;
+    flex-wrap: wrap;
+  }
+  .box{
+    background:rgb(243, 201, 243);
+    color: rgb(15, 15, 15);
+    padding: 50px;
+    border: 5px solid rgb(203, 244, 250);
+    flex-wrap: wrap;
+    text-align: justify;
+  }
+  
+  
