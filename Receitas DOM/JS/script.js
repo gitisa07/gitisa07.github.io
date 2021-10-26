@@ -10,6 +10,7 @@ window.onload = function () {
         console.log(receita);
     })
     */
+  
 }
 
 function montaDiv(receita) {
