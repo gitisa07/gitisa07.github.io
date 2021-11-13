@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Básico</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/fontawesome.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <!--Responsividade-->
+    <div class = "container-fluid">
+        <!--Linha-->
+        <div class = "row">
+            <!--Coluna de 12 pontos-->
+            <div class = "col-md-12">
+                <h3>CRUD básico
+                    <small class = "text-muted">Meu primeiro sistema com operações CRUD básicas</small>
+                </h3>
+            </div>
+        </div>
+        <!--Nova Linha-->
+        <div class = "row">
+            <!--Nova Coluna-->
+            <div class = "col-md-12">
+                <button type="button" class = "btn btn-primary" data-toggle="modal" data-target="#modalRegistro">Adicionar Itens</button>
+            </div>
+        </div>
+        <!--Nova Linha-->
+        <div class = "row" style="margin-top: 20px">
+            <!--Nova Coluna-->
+            <div class = "col-md-12">
+                <!--Criando uma tabela-->
+                <table id = "tblDados" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Sobrenome</th>
+                            <th scope="col">Data de Nascimento</th>
+                            <th scope="col">Formação</th>
+                            <th scope="col" style="width: 50px;"></th>
+                            <th scope="col" style="width: 50px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="modalRegistroLabel">Registros</h5>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input id = "hdID" type="hidden" />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Nome</label>
+                            <input id = "txtNome" type="text" class = "form-control" placeholder = "Digite o nome..."/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class = "form-group">
+                            <label for="">Sobrenome</label>
+                            <input id = "txtSobrenome" type="text" class= "form-control" placeholder = "Digite o sobrenome...">
+                        </div>
+                    </div>
+                </div>
+                <!--Nova Linha-->
+                <div class = "row">
+                    <div class = "col-md-6">
+                        <div class = "form-group">
+                            <label for="">Data de Nascimento</label>
+                            <input id = "txtDtNascimento" type="date" class= "form-control">
+                        </div>
+                    </div>
+                    <div class = "col-md-6">
+                        <div class="form-group">
+                            <label for="">Formação</label>
+                            <input id="txtFormacao" type="text" class="form-control" placeholder = "Digite a formação..."/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button id= "btnSalvar" type="button" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+</body>
+</html>
