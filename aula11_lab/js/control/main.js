@@ -37,37 +37,25 @@ function saveFood(event) {
  * exemplo de evento para exclusão
  * utiliza delegação de eventos
  */
-document.addEventListener("click", (event) =>{
+ document.addEventListener("click", (event) =>{
     //se o elemento criado dinamicamente que foi clicado for um figure
-    if(event.target && 
-        (event.target.matches("#menu img")
-            || event.target.matches("#menu figcaption")
-        )
-    ) {
+    if(event.target && (event.target.matches("#menu img") || event.target.matches("#menu figcaption"))){
         let childFood = event.target;
-
         let figureFood = childFood.parentNode;
         let foodId = figureFood.id.substr(5); //id="food-#"
         foods.destroy(foodId);
-
         view.createItems(foods.listFood(dataset));
     }
-
 })
 
 document.addEventListener("click", (event) =>{
     //se o elemento criado dinamicamente que foi clicado for um figure
-    if(event.target && 
-        (event.target.matches("#menu button"))
-    ) {
-        let childFood = event.target;
-
-        let foodId = childFood.id.substr(7);
-        console.log(foodId);
+    if(event.target && (event.target.matches("#menu button"))){
+        let foodId = parseInt(event.target.parentNode.id.substr(5));
         let updatedFood = view.save();
-        updatedFood.id = foodId;
-        console.log(updatedFood);
+        console.log(foodId)
+        foods.update(foodId, updatedFood);
+        view.createItems(foods.listFood(dataset));
     }
-
 })
 

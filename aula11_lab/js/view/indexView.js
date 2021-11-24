@@ -9,23 +9,21 @@
  * Define como os itens serão carregados na tela
  * @param {lista de itens} foods 
  */
-function createItems(foods) {
+
+function createItems(food) {
     //recupera o container dos itens
     let menu = document.querySelector("#menu");
     //apagando os itens atuais do DOM
     menu.innerHTML = "";
-    foods.forEach(food => {
-        let divFood = document.createElement("div");
-        divFood.innerHTML = `<button id = "update = ${food.id}" onclick = "updated(${food.id})">Editar</button>
-        <figure id = "food-${food.id}">
-            <img src = "${food.image}" alt = ${food.name}">
-            <figcaption> ${food.name}</figcaption>
-            </figure>`;
-        menu.appendChild(divFood);
+    food.forEach(food => {
+        let figFood = document.createElement("figure");
+        figFood.id = `food-${food.id}`;
+        figFood.innerHTML = `<button>Editar</button>
+        <img src = "${food.image}" alt = ${food.name}">
+        <figcaption> ${food.name}</figcaption>`;
+        menu.appendChild(figFood);
     });
 }
-
-
 
 function save() {
     document.querySelector('#save-food').blur();

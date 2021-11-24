@@ -1,3 +1,9 @@
+body{
+    background-color: antiquewhite;
+}
+h1{
+    font-family: verdana, arial, helvetica;
+}
 .container {
     width: 100%;
     padding:10px 5px;
@@ -13,6 +19,7 @@
     flex-wrap: wrap;
 }
 #menu figure {
+    background-color: aliceblue;
     width: 40%;
     padding: 10px;
     border:1px solid #333;
@@ -21,4 +28,7 @@
 }
 #menu img {
     width: 100%;
+}
+#menu figcaption {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
