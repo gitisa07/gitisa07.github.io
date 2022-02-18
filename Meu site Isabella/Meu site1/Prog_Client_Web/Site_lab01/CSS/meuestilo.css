@@ -125,4 +125,23 @@ h1 {
     position:relative;
     top:2px;}
   
-  
+    .btnTrabalhos{
+      border:1px solid #8f34da;
+    border-radius:4px;
+    display:inline-block;
+    cursor:pointer;
+    font-family:Verdana;
+    font-weight:normal;
+    font-size:15px;
+    padding:6px 10px;
+    text-decoration:none;
+    margin-bottom: 5px;
+    }
+    .btnTrabalhos:active {
+      position:relative;
+      top:2px;
+    }
+
+    .btnTrabalhos:hover {
+      background:linear-gradient(to bottom, #7d65b4 5%, #b9aad5 100%);
+      }
