@@ -6,23 +6,31 @@ function Livro(id, nome, autores, estilo){
 	this.estilo = estilo;
 }
 
-// programar a inserção dos novos livros no array listaLivros e sua adição no DOM
-function adicionarLivro(livro){
-// seu programa aqui.
-listaLivros.push($(nome.val()));
-console.log(listaLivros);
-}
 
 // programar a remoção do livro no array listaLivros e sua remoção no DOM
-function removerLivro(livro){
-// seu programa aqui.
+function removerLivro(id)
+{
+	for(let i=0; i<listaLivros.length; i++)
+	{
+		if(listaLivros[i].id==id)
+		{
+			listaLivros.splice(i,1);
+			console.log(listaLivros);
+		}
+	}
 }
 
+var id = 0;
 var listaLivros = [];
-		
-$(function(){
 
+
+$(function(){
 	$("#adicionar").click(function(){
+		
+		let livro = new Livro(id,$("#titulo").val(), $("#autores").val(), $("#estilo").val())
+		listaLivros.push(livro);
+		console.log(listaLivros);
+
 		var tituloLivro = $("#titulo").val();
 		var autores = $("#autores").val();
 		var estilo = $("#estilo").val();
@@ -37,19 +45,18 @@ $(function(){
 						.append($("<a>")
 								.attr("href", "#")
 								.text("Apagar"))
+								.attr("id",id)
+								.attr("onclick", "removerLivro("+(id)+")")
 					)
 		)
 		$("#titulo").val("");
 		$("#autores").val("");
 		$("#estilo").val("");
+		id++;
 	});
 
 	$("#acervo").on("click", "a", function(){
 		$(this).parents("tr").remove();
-	})
-
-	$("#excluir").click(function(){
-		
 	})
 
 	$("#apagarAcervo").click(function(){

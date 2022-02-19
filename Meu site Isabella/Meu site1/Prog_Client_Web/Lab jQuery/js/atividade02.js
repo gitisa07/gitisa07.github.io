@@ -7,10 +7,13 @@ var Produto = function(id, nome, categoria, img, valorUnitario){
     this.valorUnitario = valorUnitario;
 }
 
-function pesquisaPorId(vetor, objId){
-	return vetor.find(function(item){
-		return item.id === objId;
-	})
+function pesquisaPorId(vetor, objId)
+{
+	return vetor.find(
+        function(item)
+        {
+		    return item.id === objId;
+	    })
 }
 
 // carregamento de cardápio de exemplo
@@ -35,20 +38,29 @@ $(function(){
     */
 	$.each(cardapio, function(ind, item){
         var itemLista = $("<li>");
+        let br = $("<br>");
         // setando o item, id e conteúdo
         itemLista.attr("id", item.id);
-        itemLista.text(item.nome);
+        itemLista.text(item.nome + " -  R$" +item.valorUnitario + ",00");
         // adicionando na lista de cardápio
 		$("#cardapio").append(itemLista);
+        $("#cardapio").append(br);
 	});
 
+    //------------------------------------  
+    let valorTotal = 0;
 	$("#cardapio").on("click", "li",function(){
 		var itemEscolhido = pesquisaPorId(cardapio, $(this).attr("id"));
-        console.log(itemEscolhido);
         /*
             Sua atividade
             - coloque seu código aqui
             - você deve criar elemento de lista e (re)calcular o total
         */
+        var pedidos = $("<li>").text(cardapio[$(this).attr("id")-1].nome +" - "+ "R$"+cardapio[$(this).attr("id")-1].valorUnitario+",00");
+        valorTotal += cardapio[$(this).attr("id")-1].valorUnitario;
+        console.log(valorTotal);
+        $("#pedidos").append(pedidos);
+        $("#valorTotal").html("Valor - R$"+valorTotal+",00");
+
 	});
 });

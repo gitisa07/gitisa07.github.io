@@ -59,12 +59,9 @@ nav li:hover a {
     float:left;
     width: 70%;
     padding: 15px;
-    height: 100vh;
+    height: 100%;
 }
 
-.content h1 {
-    
-}
 
 #resultado{
     margin-top: 20px;
