@@ -1,0 +1,57 @@
+body{
+   background-color: #000;
+}
+
+header{
+    background-color: rgb(150, 148, 148);
+    height:150px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 70px;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+img{
+    width: 200px;
+    margin: 0 auto;
+    display:flex
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.persona{
+    border-radius: 5%;
+    background-color: rgb(12, 12, 12);
+    color: white;
+    width: 30%;
+    margin-left: 2.5%;
+    margin-bottom: 30px;
+    text-align: center;
+    will-change: transform;
+    transition: transform 450ms;
+}
+
+.persona:hover{
+    transition: transform 250ms;
+    transform: translateY(-3%)
+}
+
+.persona img{
+    margin-top: 14px;
+    margin-left: 50;
+    border-radius: 10%;
+    max-width: 70%;    
+    min-width: 55%;
+}
+.content{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    justify-content: left;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
